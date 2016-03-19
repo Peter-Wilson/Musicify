@@ -1,9 +1,59 @@
 <html>
 	<head>
+		<script src="../node_modules/react/dist/react-with-addons.js"></script>
+		<script src="../node_modules/react-dom/dist/react-dom.js"></script>
+		<script src="../node_modules/react-drag/dist/react-drag.js"></script>
+		<script src="../dist/react-reorderable.js"></script>
+		<script>
+		ReactDOM.render(
+		React.createElement(ReactReorderable, {
+			handle: '.draggable-handle',
+			mode: 'list',
+			onDragStart: function (data) {
+			  addRow('Drag start: ' + getLabel(data.props.children));
+			},
+			onDrop: function (data) {
+			  addRow('Drop: ' + data.map(getLabel).join(', '));
+			},
+			onChange: function (data) {
+			  addRow('Change: ' + data.map(getLabel).join(', '));
+			}
+		  },
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 1)
+		  ),
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 2)
+		  ),
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 3)
+		  ),
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 4)
+		  ),
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 5)
+		  ),
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 6)
+		  ),
+		  React.createElement('div', {
+			  className: 'draggable-element'
+			}, null, React.createElement('div', { className: 'draggable-handle' }, 7)
+		  )
+	  )
+	, document.getElementById('songs'));
+		</script>
 		<style>
-			.song-list { background-color: blue; overflow:scroll;
+			.song-list { background-color: red; overflow:auto;
 						width:50%; height:100%; float:left;}
-			.player { background-color: red;  
+			.player { background-image: url("images/stainless_steel.png"); background-size: cover;  
 						width:50%; height:100%; float:right}
 			@media only screen and (max-width: 768px) {
 				/* For mobile phones: */
@@ -17,7 +67,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="song-list"></div>
+		<div id="songs" class="song-list"></div>
 		<div class="player"></div>
 	</body>
 </html>
