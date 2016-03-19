@@ -1,56 +1,14 @@
 <html>
-	<head>
-		<script src="../node_modules/react/dist/react-with-addons.js"></script>
-		<script src="../node_modules/react-dom/dist/react-dom.js"></script>
-		<script src="../node_modules/react-drag/dist/react-drag.js"></script>
-		<script src="../dist/react-reorderable.js"></script>
-		<script>
-		ReactDOM.render(
-		React.createElement(ReactReorderable, {
-			handle: '.draggable-handle',
-			mode: 'list',
-			onDragStart: function (data) {
-			  addRow('Drag start: ' + getLabel(data.props.children));
-			},
-			onDrop: function (data) {
-			  addRow('Drop: ' + data.map(getLabel).join(', '));
-			},
-			onChange: function (data) {
-			  addRow('Change: ' + data.map(getLabel).join(', '));
-			}
-		  },
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 1)
-		  ),
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 2)
-		  ),
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 3)
-		  ),
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 4)
-		  ),
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 5)
-		  ),
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 6)
-		  ),
-		  React.createElement('div', {
-			  className: 'draggable-element'
-			}, null, React.createElement('div', { className: 'draggable-handle' }, 7)
-		  )
-	  )
-	, document.getElementById('songs'));
-		</script>
+	<head>		
+		<script src="js/jquery-2.2.2.min.js"></script>
+		<script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 		<style>
+			#sortable li {
+				list-style-type: none;
+				margin-left:none;
+			}
+			.new_country { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; }
+			.title { background-color: white; display:inline-block; margin-top:5px;}
 			.song-list { background-color: red; overflow:auto;
 						width:50%; height:100%; float:left;}
 			.player { background-image: url("images/stainless_steel.png"); background-size: cover;  
@@ -65,9 +23,56 @@
 				}
 			}
 		</style>
+		<script>
+		  $(function() {
+			$( "#sortable" ).sortable({
+			  placeholder: "ui-state-highlight"
+			});
+			$( "#sortable" ).disableSelection();
+		  });
+		  </script
 	</head>
 	<body>
-		<div id="songs" class="song-list"></div>
+		<div id="songs" class="song-list">
+			<ul id="sortable">
+			  <li><div class="new_country"><div class="title">THE WALKMEN - NEW COUNTRY</div></div></li>
+			  <li><div class="new_country"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
+			  <li><div class="new_country"><div class="title">YUCK - RUBBER</div></div></li>
+			  <li><div class="new_country"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
+			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE WALKMEN - NEW COUNTRY</div></div></li>
+			  <li><div class="new_country"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
+			  <li><div class="new_country"><div class="title">YUCK - RUBBER</div></div></li>
+			  <li><div class="new_country"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
+			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			</ul>
+			
+		</div>
 		<div class="player"></div>
+		
 	</body>
 </html>
