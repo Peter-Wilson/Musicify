@@ -5,11 +5,23 @@
 		<style>
 			#sortable li {
 				list-style-type: none;
-				margin-left:none;
+				margin-left:-50;
 			}
-			.new_country { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; }
+			#sortable {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			.new_country { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/you&me-album.jpg"); }
+			.empty_threat { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/every-open-eye-album.jpg");}
+			.rubber { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/yuck-album.jpg"); }
+			.interlude { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/mcr-album.jpg"); }
+			.lobotomy { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/digital-lobotomy-album.jpg"); }
+			.moon { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center;  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/black-listed-album.png");}
+			.shoot { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center;  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/dirty-album.jpg");}
+			.revolver { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center;  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/revolver-album.jpg");}
+			.riot { width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center;  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/riot-album.jpg");}
 			.title { background-color: white; display:inline-block; margin-top:5px;}
-			.song-list { background-color: red; overflow:auto;
+			.song-list { background-color: red; overflow:auto; padding-top:-10px;
 						width:50%; height:100%; float:left;}
 			.player { background-image: url("images/stainless_steel.png"); background-size: cover;  
 						width:50%; height:100%; float:right}
@@ -36,39 +48,39 @@
 		<div id="songs" class="song-list">
 			<ul id="sortable">
 			  <li><div class="new_country"><div class="title">THE WALKMEN - NEW COUNTRY</div></div></li>
-			  <li><div class="new_country"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
-			  <li><div class="new_country"><div class="title">YUCK - RUBBER</div></div></li>
-			  <li><div class="new_country"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
-			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
-			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
-			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
-			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
-			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
-			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
-			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
-			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
-			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
-			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
-			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
-			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
-			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="empty_threat"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
+			  <li><div class="rubber"><div class="title">YUCK - RUBBER</div></div></li>
+			  <li><div class="interlude"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
+			  <li><div class="moon"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="shoot"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="riot"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="moon"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="shoot"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="riot"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="riot"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
 			  <li><div class="new_country"><div class="title">THE WALKMEN - NEW COUNTRY</div></div></li>
-			  <li><div class="new_country"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
-			  <li><div class="new_country"><div class="title">YUCK - RUBBER</div></div></li>
-			  <li><div class="new_country"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
-			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
-			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
-			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
-			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
-			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
-			  <li><div class="new_country"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
-			  <li><div class="new_country"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
-			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
-			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
-			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
-			  <li><div class="new_country"><div class="title">THE BEATLES - REVOLVER</div></div></li>
-			  <li><div class="new_country"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
-			  <li><div class="new_country"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="empty_threat"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
+			  <li><div class="rubber"><div class="title">YUCK - RUBBER</div></div></li>
+			  <li><div class="interlude"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
+			  <li><div class="moon"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="shoot"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="riot"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="moon"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
+			  <li><div class="shoot"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
+			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="riot"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
+			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
+			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="riot"><div class="title">KAISER CHIEFS - I PREDICT A RIOT</div></div></li>
 			</ul>
 			
 		</div>
