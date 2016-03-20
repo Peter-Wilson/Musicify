@@ -4,139 +4,157 @@
 		<title>My Library</title>
 		<link rel="stylesheet" type="text/css" href="library/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css"/>
-	</head>
 	<style>
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 10%; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-	background-image: url("library/images/lennon.jpg");
-	background-size: cover;
-    background-color: #fff;
-	opacity: 1;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-/* The Close Button */
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-header {
-    padding: 2px 16px;
-    color: white;
-}
-
-.modal-body {
-	padding: 1%;
-	background-color: #fff;
-	opacity: 0.9;
-	}
-
-.modal-footer {
-    padding: 2px 16px;
-    color: white;
-}
-  .slick-center {
-    color: #FFF;
-	
-  }
-  .slider{
-    width: 60%;  
-    height: 30%;
-    margin: auto; 
-	opacity: 1.0;
-
-  }
-  .slider div{
-  }
-  .slick-slide{
-    opacity: .5;
-  }
-  .slick-center{
-    display: block;
-    max-width: 10% !important;
-    max-height:20% !important;
-    opacity: 1.0;
-	z-index: 1;
-  }
-  h1, h2 {
-  text-align: center;
-  }
+/*HTML-wide CSS for things like text*/
+		html {
+			background-image: url("library/images/background/lightfuckingwood.jpg");
+			background-size: cover;
+		}
+		
+/*Center-mode slider CSS*/
+		.slick-center {
+		}
+		.slider{
+			width: 60%;  
+			height: 30%;
+			margin: auto;
+			opacity: 1.0;
+		}
+		.slider div{
+			background-image: url("library/images/background/darkfuckingwood.jpg");
+			background-size: cover;
+		}
+		.slick-slide{
+			opacity: .6;
+		}
+		.slick-center{
+			display: block;
+			max-width: 10% !important;
+			max-height:30% !important;
+			opacity: 1.0;
+			z-index: 1;
+		}
+		h1, h2 {
+		text-align: center;
+		}
+		
+/*CSS for the modal box*/
+		.modalDialog {
+			position: fixed;
+			font-family: Arial, Helvetica, sans-serif;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.8);
+			z-index: 99999;
+			opacity:0;
+			-webkit-transition: opacity 400ms ease-in;
+			-moz-transition: opacity 400ms ease-in;
+			transition: opacity 400ms ease-in;
+			pointer-events: none;
+		}
+		.modalDialog:target {
+			opacity:1;
+			pointer-events: auto;
+		}
+		.modalDialog > div {
+			width: 400px;
+			position: relative;
+			margin: 10% auto;
+			padding: 5px 20px 13px 20px;
+			border-radius: 10px;
+			background: #fff;
+			background: -moz-linear-gradient(#fff, #999);
+			background: -webkit-linear-gradient(#fff, #999);
+			background: -o-linear-gradient(#fff, #999);
+		}
+		.close {
+			background: #606061;
+			color: #FFFFFF;
+			line-height: 25px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: -10px;
+			width: 24px;
+			text-decoration: none;
+			font-weight: bold;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+			-moz-box-shadow: 1px 1px 3px #000;
+			-webkit-box-shadow: 1px 1px 3px #000;
+			box-shadow: 1px 1px 3px #000;
+		}
+		.close:hover {
+			background: #00d9ff;
+		}
 	</style>
-	</body>
+	</head>
 	<body>
-		<h1>My Library</h1>
+		<div class="title">
+			<h1>My Library</h1>
+			<hr>
+		</div>
 		<section id="slick-content">
-			<H2>Recent</h2>
+			<div class=headings">
+				<H2>Recent</h2>
+			<div>
 			<div class="slider">
-				<div><input type="image" id= "myBtn1" src="library/images/lennon.jpg" alt="Submit" width="200" height="200"></div>
-				<div><input type="image" id="myBtn2" src="library/images/sgtpepper.jpg" alt="Submit" width="200" height="200"></div>
-				<div><input type="image" id= "myBtn3" src="library/images/paul.jpg" alt="Submit" width="200" height="200"></div>
-				<div><input type="image" id="myBtn4" src="library/images/pete.jpg" alt="Submit" width="200" height="200"></div>
-				<div><input type="image" id= "myBtn5" src="library/images/pleasepleaseme.jpg" alt="Submit" width="200" height="200"></div>
-				<div><input type="image" id="myBtn6" src="library/images/richard.jpg" alt="Submit" width="200" height="200"></div>
+				<div><input type="image" id= "myBtn" src="library/images/beatles/abbey.jpg" width="200" height="200"></div>
+				<div><input type="image" id="myBtn1" src="library/images/beatles/forsale.jpg" width="200" height="200"></div>
+				<div><input type="image" id= "myBtn2" src="library/images/metallica/death.jpg" width="200" height="200"></div>
+				<div><input type="image" id="myBtn3" src="library/images/metallica/anger.jpg" width="200" height="200"></div>
+				<div><input type="image" id= "myBtn4" src="library/images/metallica/reload.jpg" width="200" height="200"></div>
+				<div><input type="image" id="myBtn5" src="library/images/acdc/switch.jpg" width="200" height="200"></div>
 			</div>
 		</section>
 		<section id="slick-content">
 			<h2>The Beatles</h2>
 			<div class="slider">
-				<div><img src="library/images/lennon.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/paul.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/pete.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/pleasepleaseme.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/richard.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/sgtpepper.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/beatles/abbey.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/forsale.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/hard.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/help.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/letitbe.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/please.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/revolver.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/rubber.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/sgtpepper.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/submarine.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/white.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/withthebeatles.jpg" height="200" width="200"></div>
 			</div>
 		</section>
 		<section id="slick-content">
 			<h2>Metallica</h2>
 			<div class="slider">
-				<div><img src="library/images/lennon.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/paul.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/pete.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/pleasepleaseme.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/richard.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/sgtpepper.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/metallica/anger.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/black.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/death.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/garage.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/justice.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/kill.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/lightning.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/load.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/puppet.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/reload.jpg" height="200" width="200"></div>
 			</div>
 		</section>
 		<section id="slick-content">
 			<h2>AC/DC</h2>
 			<div class="slider">
-				<div><img src="library/images/lennon.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/paul.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/pete.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/pleasepleaseme.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/richard.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/sgtpepper.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/backblack.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/ball.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/blow.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/dirty.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/family.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/ice.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/jail.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/live.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/switch.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/wall.jpg" alt="Smiley face" height="200" width="200"></div>
 			</div>
 		</section>
 	</body>
@@ -183,55 +201,18 @@
 		<!-- Modal content -->
 		<div class="modal-content">
 			<div class="modal-header">
-				<span class="close">×</span>
-				<h2>Modal Header</h2>
+				<span class="close">X</span>
+				<h2>Abbey Road</h2>
 			</div>
 			<div class="modal-body">
 				<p>Some text in the Modal Body</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
-				<p>Some other text...</p>
+
 			</div>
 			<div class="modal-footer">
-				<h3>Modal Footer</h3>
+				<h3>Play All</h3>
+				<a href="player.html"><img src="library/images/misc/play.png" height="50px" width="50px"></a> 
 			</div>
 		</div>
 		</div>
-	<script>
-// Get the modal
-	var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-	var btn = document.getElementById("myBtn1");
-
-// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-	btn.onclick = function() {
-		modal.style.display = "block";
-	}
-
-// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-		modal.style.display = "none";
-	}
-
-// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-	</script>
 	</body>
 </html>
