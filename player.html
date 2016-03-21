@@ -56,6 +56,11 @@
 				-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
 				-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 			}
+			#home { 
+				position:absolute;top:0; left:0;
+				height: 50px; width:50px; background-image: url("images/home.png");
+				background-size: cover;
+			}
 			.new_country { 
 				width: 100%; background-color:blue; height: 30px; line-height: 20px; text-align:center; background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/you&me-album.jpg"); 
 			}
@@ -158,6 +163,7 @@
 		  </script
 	</head>
 	<body onLoad="setupSlider()">
+		<div id="home"  onclick="location.href='homepage.html'"></div>
 		<div id="songs" class="song-list">
 			<ul id="sortable">
 			  <li><div class="new_country"><div class="title">THE WALKMEN - NEW COUNTRY</div></div></li>
