@@ -1,0 +1,377 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My Friends</title>
+		<link rel="stylesheet" type="text/css" href="library/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css"/>
+	<style>
+/*HTML-wide CSS for things like text*/
+		html {
+			background-image: url("library/images/background/lightfuckingwood.jpg");
+			background-size: cover;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		table {
+			margin-left:auto; 
+			margin-right:auto;
+		}
+		a:link {
+			color: #000000;
+		}
+		a:visited {
+			color: #000000;
+		}
+		a:hover {
+			color: #1c86ee;
+		}
+		a:active {
+			color: #36648b;
+		}
+		.play:hover {
+			-moz-box-shadow: 0 0 10px #ccc; 
+			-webkit-box-shadow: 0 0 10px #ccc; 
+			box-shadow: 0 0 10px #ccc;
+		}
+/*Center-mode slider CSS*/
+		.slick-center {
+		}
+		.slider{
+					background-image: url("library/images/background/darkfuckingwood.jpg");
+			background-size: cover;
+			width: 60%;  
+			height: 31%;
+			margin: auto;
+			opacity: 1.0;
+		}
+		.slider div{
+			
+		}
+		.slick-slide{
+			opacity: .6;
+
+		}
+		.slick-center{
+			display: block;
+			max-width: 10% !important;
+			max-height:20% !important;
+			opacity: 1.0;
+			z-index: 1;
+		}
+		h1, h2 {
+		text-align: center;
+		}
+		
+/*CSS for the modal box*/
+		.modalDialog {
+			position: fixed;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			text-align: center;
+			vertical-align: middle;
+			background: rgba(0, 0, 0, 0.8);
+			z-index: 99999;
+			opacity: 0;
+			-webkit-transition: opacity 100ms ease-in;
+			-moz-transition: opacity 100ms ease-in;
+			transition: opacity 100ms ease-in;
+			pointer-events: none;
+			overflow: scroll;
+		}
+		.modalDialog:target {
+			opacity:1;
+			pointer-events: auto;
+		}
+		.modalDialog > div {
+			width: 400px;
+			position: relative;
+			margin: 10% auto;
+			padding: 5px 20px 13px 20px;
+			border-radius: 10px;
+			background: #fff;
+			opacity: 0.8;
+
+		}
+		.close {
+			background: #606061;
+			color: #FFFFFF;
+			line-height: 25px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: -10px;
+			width: 34px;
+			text-decoration: none;
+			font-weight: bold;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+			-moz-box-shadow: 1px 1px 3px #000;
+			-webkit-box-shadow: 1px 1px 3px #000;
+			box-shadow: 1px 1px 3px #000;
+		}
+		.close:hover {
+			background: #00d9ff;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="title">
+			<h1>What Your Friends Revently Listened To...</h1>
+			<hr>
+		</div>
+		<section id="slick-content">
+			<div class=headings">
+				<H2>Peter Wilson</h2>
+			<div>
+			<div class="slider">
+				<div><a href="#openModal1"><img src="library/images/beatles/abbey.jpg" width="200" height="200"></a></div>
+				<div><a href="#openModal2"><img src="library/images/beatles/forsale.jpg" width="200" height="200"></a></div>
+				<div><a href="#openModal3"><img src="library/images/metallica/death.jpg" width="200" height="200"></a></div>
+				<div><a href="#openModal4"><img src="library/images/metallica/anger.jpg" width="200" height="200"></a></div>
+				<div><a href="#openModal5"><img src="library/images/metallica/reload.jpg" width="200" height="200"></a></div>
+				<div><a href="#openModal6"><img src="library/images/acdc/switch.jpg" width="200" height="200"></a></div>
+			</div>
+		</section>
+		<section id="slick-content">
+			<h2>Andrew "The Beatle Lover" Sindelar</h2>
+			<div class="slider">
+				<div><img src="library/images/beatles/abbey.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/forsale.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/hard.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/help.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/letitbe.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/please.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/revolver.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/rubber.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/sgtpepper.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/submarine.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/white.jpg" height="200" width="200"></div>
+				<div><img src="library/images/beatles/withthebeatles.jpg" height="200" width="200"></div>
+			</div>
+		</section>
+		<section id="slick-content">
+			<h2>Mack Johnson</h2>
+			<div class="slider">
+				<div><img src="library/images/metallica/anger.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/black.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/death.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/garage.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/justice.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/kill.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/lightning.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/load.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/puppet.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/reload.jpg" height="200" width="200"></div>
+			</div>
+		</section>
+		<section id="slick-content">
+			<h2>Eric Smith</h2>
+			<div class="slider">
+				<div><img src="library/images/acdc/backblack.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/ball.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/blow.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/dirty.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/family.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/ice.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/jail.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/live.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/switch.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/wall.jpg" alt="Smiley face" height="200" width="200"></div>
+			</div>
+		</section>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="library/slick/slick.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.slider').slick({
+					dots: true,	
+					centerMode: true,
+
+					infinite: true,
+					slidesToShow: 5,
+					speed:100,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								arrows: true,
+								centerMode: true,
+
+								slidesToShow: 5
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								arrows: true,
+								centerMode: true,
+								slidesToShow: 1
+							}
+						}
+					]
+				});
+			});
+	</script>
+	</body>
+	<body>
+		<div id="openModal1" class="modalDialog">
+			<div>	<a href="#close" title="Close" class="close">X</a>
+				<h2>The Beatles: Abbey Road</h2>
+				<div class="play">
+					<table style="text-align:center;">
+						<tr>
+							<td>Play All:</td>
+							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+					</table>
+				</div>
+				<p><a href="player.html">Come Together</a></p>
+				<p><a href="player.html">Something</a></p>
+				<p><a href="player.html">Maxwell's Silver Hammer</a></p>
+				<p><a href="player.html">Oh! Darling</a></p>
+				<p><a href="player.html">Octopus's Garden</a></p>
+				<p><a href="player.html">I Want You</a></p>
+				<p><a href="player.html">Here Come the Sun</a></p>
+				<p><a href="player.html">Because</a></p>
+				<p><a href="player.html">You Never Give Me Your Money</a></p>
+				<p><a href="player.html">Sun King</a></p>
+				<p><a href="player.html">Mean Mr. Mustard</a></p>
+				<p><a href="player.html">Polythene Pam</a></p>
+				<p><a href="player.html">She Came Through the Bathroom</a></p>
+				<p><a href="player.html">Golden Slumbers</a></p>
+				<p><a href="player.html">Carry That Weight</a></p>
+				<p><a href="player.html">The End</a></p>
+				<p><a href="player.html">Her Majesty</a></p>
+			</div>
+		</div>
+		<div id="openModal2" class="modalDialog">
+			<div>	<a href="#close" title="Close" class="close">X</a>
+				<h2>The Beatles: Beatles for Sale</h2>
+				<div class="play">
+					<table style="text-align:center;">
+						<tr>
+							<td>Play All:</td>
+							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+					</table>
+				</div>
+				<p><a href="player.html">No Reply</a></p>
+				<p><a href="player.html">I'm a Loser</a></p>
+				<p><a href="player.html">Baby's in Black</a></p>
+				<p><a href="player.html">Rock & Roll Music</a></p>
+				<p><a href="player.html">I'll Follow the Sun</a></p>
+				<p><a href="player.html">Mr. Moonlight</a></p>
+				<p><a href="player.html">Kansas City</a></p>
+				<p><a href="player.html">Eight Days a Week</a></p>
+				<p><a href="player.html">Words of Love</a></p>
+				<p><a href="player.html">Honey Don't</a></p>
+				<p><a href="player.html">Every Little Thing</a></p>
+				<p><a href="player.html">I Don't Want to Spoil the Party</a></p>
+				<p><a href="player.html">What You're Doing</a></p>
+				<p><a href="player.html">Everybody's Trying to be my Baby</a></p>
+			</div>
+		</div>
+		<div id="openModal3" class="modalDialog">
+			<div>	<a href="#close" title="Close" class="close">X</a>
+				<h2>Metallica: Death Magnetic</h2>
+				<div class="play">
+					<table style="text-align:center;">
+						<tr>
+							<td>Play All:</td>
+							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+					</table>
+				</div>
+				<p><a href="player.html">That was just Your Life</a></p>
+				<p><a href="player.html">The end of the Line</a></p>
+				<p><a href="player.html">Broken, Beat & Scarred</a></p>
+				<p><a href="player.html">The Day that Never Comes</a></p>
+				<p><a href="player.html">All Nightmare Long</a></p>
+				<p><a href="player.html">Cyanide</a></p>
+				<p><a href="player.html">The Unforgiven III</a></p>
+				<p><a href="player.html">The Judas Kiss</a></p>
+				<p><a href="player.html">Suicide & Redemption</a></p>
+				<p><a href="player.html">My Apocalypse</a></p>
+			</div>
+		</div>
+		<div id="openModal4" class="modalDialog">
+			<div>	<a href="#close" title="Close" class="close">X</a>
+				<h2>Metallica: St. Anger</h2>
+				<div class="play">
+					<table style="text-align:center;">
+						<tr>
+							<td>Play All:</td>
+							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+					</table>
+				</div>
+				<p><a href="player.html">Frantic</a></p>
+				<p><a href="player.html">St. Anger</a></p>
+				<p><a href="player.html">Some Kind of Monster</a></p>
+				<p><a href="player.html">Dirty Window</a></p>
+				<p><a href="player.html">Invisible Kid</a></p>
+				<p><a href="player.html">My World</a></p>
+				<p><a href="player.html">Shoot Me Again</a></p>
+				<p><a href="player.html">Sweet Amber</a></p>
+				<p><a href="player.html">The Unnamed Feeling</a></p>
+				<p><a href="player.html">Purify</a></p>
+				<p><a href="player.html">All Within My Hands</a></p>
+			</div>
+		</div>
+		<div id="openModal5" class="modalDialog">
+			<div>	<a href="#close" title="Close" class="close">X</a>
+				<h2>Metallica: Reload</h2>
+				<div class="play">
+					<table style="text-align:center;">
+						<tr>
+							<td>Play All:</td>
+							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+					</table>
+				</div>
+				<p><a href="player.html">Fuel</a></p>
+				<p><a href="player.html">The Memory Remains</a></p>
+				<p><a href="player.html">Devil's Dance</a></p>
+				<p><a href="player.html">The Unforgiven II</a></p>
+				<p><a href="player.html">Better Than You</a></p>
+				<p><a href="player.html">Slither</a></p>
+				<p><a href="player.html">Carpe Diem Baby</a></p>
+				<p><a href="player.html">Bad Seed</a></p>
+				<p><a href="player.html">Where the Wild Things Are</a></p>
+				<p><a href="player.html">Prince Charming</a></p>
+				<p><a href="player.html">Low Man's Lyric</a></p>
+				<p><a href="player.html">Attitude</a></p>
+				<p><a href="player.html">Fixxxer</a></p>
+			</div>
+		</div>
+		<div id="openModal6" class="modalDialog">
+			<div>	<a href="#close" title="Close" class="close">X</a>
+				<h2>AC/DC: Flick of the Switch</h2>
+				<div class="play">
+					<table style="text-align:center;">
+						<tr>
+							<td>Play All:</td>
+							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+					</table>
+				</div>
+				<p><a href="player.html">Rising Power</a></p>
+				<p><a href="player.html">This House is on Fire</a></p>
+				<p><a href="player.html">Flick of the Switch</a></p>
+				<p><a href="player.html">Nervous Shakedown</a></p>
+				<p><a href="player.html">Landslide</a></p>
+				<p><a href="player.html">Guns for Hire</a></p>
+				<p><a href="player.html">Deep in the Hole</a></p>
+				<p><a href="player.html">Bedlam in Belgium</a></p>
+				<p><a href="player.html">Badlands</a></p>
+				<p><a href="player.html">Brain Shake</a></p>
+			</div>
+		</div>
+	</body>
+</html>
