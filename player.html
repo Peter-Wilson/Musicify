@@ -14,6 +14,7 @@
 				margin-top: 0px;
 				margin-bottom: 0px;
 			}
+			
 			.circular {
 				width: 500px;
 				height: 500px;
@@ -89,9 +90,8 @@
 			.title { background-color: white; display:inline-block; margin-top:5px; font-weight:bold;}
 			.song-list { background-color: red; overflow:auto; padding-top:-10px;
 						width:50%; height:100%; float:left;}
-			.player { background-image: url("images/stainless_steel.png"); background-size: cover;  
-						width:50%; height:100%; float:right}
-			@media only screen and (max-width: 768px) {
+			.player { background-image: url("images/stainless_steel.png"); background-size: cover;  width:50%; height:100%; float:right}
+			@media only screen and (max-width: 1000px) {
 				/* For mobile phones: */
 				.song-list{
 					width: 100%; height:45%; float:none;
@@ -103,6 +103,10 @@
 				  margin-top:-185px;}
 				#next { height: 100px; width:100px;margin-bottom:0px; margin-right: 0px;}
 				#prev { height: 100px; width:100px;margin-bottom:0px; margin-left: 0px;}
+				#slider{
+						top:50%;
+						margin-top: -120px;
+					}
 			}
 		</style>
 		<script>
@@ -119,10 +123,13 @@
 			  });
 		  });
 		  
+		  $(window).on("resize", function(){var rad = ($('#cd').width()/2)+50;
+										circularSlider.setRadius(rad);});
+		  var circularSlider;
 		  
 		  function setupSlider(){
 			  var rad = ($('#cd').width()/2)+50;
-			  var circularSlider = $('#slider').CircularSlider({ 
+			  circularSlider = $('#slider').CircularSlider({ 
 					min : 30, 
 					radius: rad,
 					max: 200, 
