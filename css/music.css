@@ -198,17 +198,36 @@
 	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/vinylstoreII.jpg");
 	background-size: cover;
 }
-#my_library{
-	background: url("../images/my_library.png") no-repeat center;
-	height:33%;
+#my_library {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#my_library:hover { 
+	-moz-box-shadow: 0 0 50px #ccc; 
+	-webkit-box-shadow: 0 0 50px #ccc; 
+	box-shadow: 0 0 50px #ccc; 
+}
+#friends_list{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#friends_list{
-	background: url("../images/friends_list.png") no-repeat center;
-	height:33%;
+#friends_list:hover {
+	-moz-box-shadow: 0 0 50px #ccc; 
+	-webkit-box-shadow: 0 0 50px #ccc; 
+	box-shadow: 0 0 50px #ccc; 
 }
 
 #featured{
-	background: url("../images/feature_music.png") no-repeat center;
-	height:33%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+#featured:hover {
+	-moz-box-shadow: 0 0 50px #ccc; 
+	-webkit-box-shadow: 0 0 50px #ccc; 
+	box-shadow: 0 0 50px #ccc; 
 }
