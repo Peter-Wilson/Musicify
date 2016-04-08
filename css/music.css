@@ -199,7 +199,6 @@
 	background-size: cover;
 }
 #my_library {
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -209,7 +208,6 @@
 	box-shadow: 0 0 50px #ccc; 
 }
 #friends_list{
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -221,7 +219,6 @@
 }
 
 #featured{
-	display: block;
 	margin-left: auto;
 	margin-right: auto
 }
