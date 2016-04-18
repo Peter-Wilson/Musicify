@@ -5,18 +5,18 @@
 		<link rel="stylesheet" type="text/css" href="library/slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="library/slick/slick-theme.css"/>
 	<style>
-	#home { 
-		position:absolute;
-		top:0; 
-		left:0;
-		opacity: 0.7;
-	}
-	#home:hover {
-		opacity: 1;
-		-moz-box-shadow: 0 0 20px #000; 
-		-webkit-box-shadow: 0 0 20px #000; 
-		box-shadow: 0 0 20px #000;
-	}
+		#home { 
+			position:absolute;
+			top:0; 
+			left:0;
+			opacity: 0.7;
+		}
+		#home:hover {
+			opacity: 1;
+			-moz-box-shadow: 0 0 20px #000; 
+			-webkit-box-shadow: 0 0 20px #000; 
+			box-shadow: 0 0 20px #000;
+		}
 /*HTML-wide CSS for things like text*/
 		html {
 			background-image: url("library/images/background/lightfuckingwood.jpg");
@@ -26,6 +26,10 @@
 		table {
 			margin-left:auto; 
 			margin-right:auto;
+		}
+		a {
+			text-decoration:none;
+			font-weight: bold;
 		}
 		a:link {
 			color: #000000;
@@ -39,7 +43,7 @@
 		a:active {
 			color: #36648b;
 		}
-		.play:hover {
+		.song:hover {
 			-moz-box-shadow: 0 0 10px #ccc; 
 			-webkit-box-shadow: 0 0 10px #ccc; 
 			box-shadow: 0 0 10px #ccc;
@@ -74,6 +78,10 @@
 		}
 		
 /*CSS for the modal box*/
+		.play:hover {
+			-webkit-filter: invert(.8);
+			filter: invert(.8);
+		}
 		.modalDialog {
 			position: fixed;
 			font-family: Arial, Helvetica, sans-serif;
@@ -126,7 +134,7 @@
 			box-shadow: 1px 1px 3px #000;
 		}
 		.close:hover {
-			background: #00d9ff;
+			background: #000;
 		}
 	</style>
 	</head>
@@ -236,37 +244,73 @@
 	</body>
 	<body>
 		<div id="openModal1" class="modalDialog">
-			<div>	<a href="#close" title="Close" class="close">X</a>
+			<div>	
+				<a href="#close" title="Close" class="close">X</a>
 				<h2>The Beatles: Abbey Road</h2>
-				<div class="play">
-					<table style="text-align:center;">
-						<tr>
+				<div>
+					<table style="text-align:left;">
+						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play2.png" width="70" height="70"></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Come Together</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Something</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Maxwell's Silver Hammer</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Oh! Darling</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Octopus's Garden</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I Want You</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Here Come the Sun</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Because</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>You Never Give Me Your Money</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Sun King</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Mean Mr. Mustard</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Polythene Pam</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>She Came Through the Bathroom</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Golden Slumbers</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Carry That Weight</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>The End</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Her Majesty</div></a></td>
 						</tr>
 					</table>
 				</div>
-				<p><a href="player.html">Come Together</a></p>
-				<p><a href="player.html">Something</a></p>
-				<p><a href="player.html">Maxwell's Silver Hammer</a></p>
-				<p><a href="player.html">Oh! Darling</a></p>
-				<p><a href="player.html">Octopus's Garden</a></p>
-				<p><a href="player.html">I Want You</a></p>
-				<p><a href="player.html">Here Come the Sun</a></p>
-				<p><a href="player.html">Because</a></p>
-				<p><a href="player.html">You Never Give Me Your Money</a></p>
-				<p><a href="player.html">Sun King</a></p>
-				<p><a href="player.html">Mean Mr. Mustard</a></p>
-				<p><a href="player.html">Polythene Pam</a></p>
-				<p><a href="player.html">She Came Through the Bathroom</a></p>
-				<p><a href="player.html">Golden Slumbers</a></p>
-				<p><a href="player.html">Carry That Weight</a></p>
-				<p><a href="player.html">The End</a></p>
-				<p><a href="player.html">Her Majesty</a></p>
 			</div>
 		</div>
 		<div id="openModal2" class="modalDialog">
-			<div>	<a href="#close" title="Close" class="close">X</a>
+			<div>	
+				<a href="#close" title="Close" class="close">X</a>
 				<h2>The Beatles: Beatles for Sale</h2>
 				<div class="play">
 					<table style="text-align:center;">
@@ -293,7 +337,8 @@
 			</div>
 		</div>
 		<div id="openModal3" class="modalDialog">
-			<div>	<a href="#close" title="Close" class="close">X</a>
+			<div>	
+				<a href="#close" title="Close" class="close">X</a>
 				<h2>Metallica: Death Magnetic</h2>
 				<div class="play">
 					<table style="text-align:center;">
@@ -316,7 +361,8 @@
 			</div>
 		</div>
 		<div id="openModal4" class="modalDialog">
-			<div>	<a href="#close" title="Close" class="close">X</a>
+			<div>	
+				<a href="#close" title="Close" class="close">X</a>
 				<h2>Metallica: St. Anger</h2>
 				<div class="play">
 					<table style="text-align:center;">
@@ -340,7 +386,8 @@
 			</div>
 		</div>
 		<div id="openModal5" class="modalDialog">
-			<div>	<a href="#close" title="Close" class="close">X</a>
+			<div>	
+				<a href="#close" title="Close" class="close">X</a>
 				<h2>Metallica: Reload</h2>
 				<div class="play">
 					<table style="text-align:center;">
@@ -366,7 +413,8 @@
 			</div>
 		</div>
 		<div id="openModal6" class="modalDialog">
-			<div>	<a href="#close" title="Close" class="close">X</a>
+			<div>	
+				<a href="#close" title="Close" class="close">X</a>
 				<h2>AC/DC: Flick of the Switch</h2>
 				<div class="play">
 					<table style="text-align:center;">
