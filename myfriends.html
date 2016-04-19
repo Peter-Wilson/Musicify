@@ -9,13 +9,14 @@
 			position:absolute;
 			top:0; 
 			left:0;
-			opacity: 0.7;
+			opacity: 1;
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
 		}
 		#home:hover {
 			opacity: 1;
-			-moz-box-shadow: 0 0 20px #000; 
-			-webkit-box-shadow: 0 0 20px #000; 
-			box-shadow: 0 0 20px #000;
+			-webkit-filter: grayscale(0) saturate(2);
+			filter: grayscale(0) saturate(2);
 		}
 /*HTML-wide CSS for things like text*/
 		html {
@@ -38,21 +39,22 @@
 			color: #000000;
 		}
 		a:hover {
-			color: #1c86ee;
+			color: #00badb;
 		}
 		a:active {
 			color: #36648b;
 		}
 		.song:hover {
-			-moz-box-shadow: 0 0 10px #ccc; 
-			-webkit-box-shadow: 0 0 10px #ccc; 
-			box-shadow: 0 0 10px #303030;
+			background: #000;
+			-moz-box-shadow: 0 0 10px #000; 
+			-webkit-box-shadow: 0 0 10px #000; 
+			box-shadow: 0 0 10px #000;
 		}
 /*Center-mode slider CSS*/
 		.slick-center {
 		}
 		.slider{
-					background-image: url("library/images/background/darkfuckingwood.jpg");
+			background-image: url("library/images/background/darkfuckingwood.jpg");
 			background-size: cover;
 			width: 60%;  
 			height: 31%;
@@ -78,9 +80,13 @@
 		}
 		
 /*CSS for the modal box*/
+		.play {
+			-webkit-filter: invert(1) grayscale(1) contrast(0.8);
+			filter: invert(1) grayscale(1) contrast(0.8);
+		}
 		.play:hover {
-			-webkit-filter: invert(1);
-			filter: invert(1);
+			-webkit-filter: invert(0) grayscale(0) contrast(1);;
+			filter: invert(0) grayscale(0) contrast(1);;
 		}
 		.modalDialog {
 			position: fixed;
@@ -118,14 +124,14 @@
 			box-shadow: 0 0 20px #303030;
 		}
 		.close {
-			background: #606061;
+			background: #909090;
 			color: #FFFFFF;
-			line-height: 25px;
+			line-height: 35px;
 			position: absolute;
 			right: -12px;
 			text-align: center;
 			top: -10px;
-			width: 34px;
+			width: 45px;
 			text-decoration: none;
 			font-weight: bold;
 			-webkit-border-radius: 12px;
@@ -145,7 +151,7 @@
 			<a href="homepage.html"><img border="0" alt="Home" src="images/home.png" width="90" height="90"></a>
 		</div>
 		<div class="title">
-			<h1>What Your Friends Revently Listened To...</h1>
+			<h1>What Your Friends Recently Listened To</h1>
 			<hr>
 		</div>
 		<section id="slick-content">
@@ -253,7 +259,7 @@
 					<table style="text-align:left;">
 						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img class="play" src="library/images/misc/play2.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play.png" width="70" height="70"></a></td>
 						</tr>
 						<tr class="song">
 							<td  colspan=2><a href="player.html"><div>Come Together</div></a></td>
@@ -314,128 +320,280 @@
 			<div>	
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>The Beatles: Beatles for Sale</h2>
-				<div class="play">
-					<table style="text-align:center;">
-						<tr>
+				<div>
+					<table style="text-align:left;">
+						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+						<tr class="song">
+							<td  colspan=2><a href="player.html"><div>No Reply</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'm a Loser</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Baby's in Black</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Rock & Roll Music</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'll Follow the Sun</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Mr. Moonlight</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Kansas City</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Eight Days a Week</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Words of Love</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Honey Don't</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Every Little Thing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I Don't Want to Spoil the Party</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>What You're Doing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Everybody's Trying to be my Baby</div></a></td>
 						</tr>
 					</table>
 				</div>
-				<p><a href="player.html">No Reply</a></p>
-				<p><a href="player.html">I'm a Loser</a></p>
-				<p><a href="player.html">Baby's in Black</a></p>
-				<p><a href="player.html">Rock & Roll Music</a></p>
-				<p><a href="player.html">I'll Follow the Sun</a></p>
-				<p><a href="player.html">Mr. Moonlight</a></p>
-				<p><a href="player.html">Kansas City</a></p>
-				<p><a href="player.html">Eight Days a Week</a></p>
-				<p><a href="player.html">Words of Love</a></p>
-				<p><a href="player.html">Honey Don't</a></p>
-				<p><a href="player.html">Every Little Thing</a></p>
-				<p><a href="player.html">I Don't Want to Spoil the Party</a></p>
-				<p><a href="player.html">What You're Doing</a></p>
-				<p><a href="player.html">Everybody's Trying to be my Baby</a></p>
 			</div>
 		</div>
 		<div id="openModal3" class="modalDialog">
 			<div>	
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>Metallica: Death Magnetic</h2>
-				<div class="play">
-					<table style="text-align:center;">
-						<tr>
+				<div>
+					<table style="text-align:left;">
+						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+						<tr class="song">
+							<td  colspan=2><a href="player.html"><div>No Reply</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'm a Loser</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Baby's in Black</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Rock & Roll Music</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'll Follow the Sun</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Mr. Moonlight</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Kansas City</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Eight Days a Week</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Words of Love</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Honey Don't</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Every Little Thing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I Don't Want to Spoil the Party</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>What You're Doing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Everybody's Trying to be my Baby</div></a></td>
 						</tr>
 					</table>
 				</div>
-				<p><a href="player.html">That was just Your Life</a></p>
-				<p><a href="player.html">The end of the Line</a></p>
-				<p><a href="player.html">Broken, Beat & Scarred</a></p>
-				<p><a href="player.html">The Day that Never Comes</a></p>
-				<p><a href="player.html">All Nightmare Long</a></p>
-				<p><a href="player.html">Cyanide</a></p>
-				<p><a href="player.html">The Unforgiven III</a></p>
-				<p><a href="player.html">The Judas Kiss</a></p>
-				<p><a href="player.html">Suicide & Redemption</a></p>
-				<p><a href="player.html">My Apocalypse</a></p>
 			</div>
 		</div>
 		<div id="openModal4" class="modalDialog">
 			<div>	
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>Metallica: St. Anger</h2>
-				<div class="play">
-					<table style="text-align:center;">
-						<tr>
+				<div>
+					<table style="text-align:left;">
+						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+						<tr class="song">
+							<td  colspan=2><a href="player.html"><div>No Reply</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'm a Loser</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Baby's in Black</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Rock & Roll Music</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'll Follow the Sun</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Mr. Moonlight</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Kansas City</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Eight Days a Week</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Words of Love</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Honey Don't</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Every Little Thing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I Don't Want to Spoil the Party</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>What You're Doing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Everybody's Trying to be my Baby</div></a></td>
 						</tr>
 					</table>
 				</div>
-				<p><a href="player.html">Frantic</a></p>
-				<p><a href="player.html">St. Anger</a></p>
-				<p><a href="player.html">Some Kind of Monster</a></p>
-				<p><a href="player.html">Dirty Window</a></p>
-				<p><a href="player.html">Invisible Kid</a></p>
-				<p><a href="player.html">My World</a></p>
-				<p><a href="player.html">Shoot Me Again</a></p>
-				<p><a href="player.html">Sweet Amber</a></p>
-				<p><a href="player.html">The Unnamed Feeling</a></p>
-				<p><a href="player.html">Purify</a></p>
-				<p><a href="player.html">All Within My Hands</a></p>
 			</div>
 		</div>
 		<div id="openModal5" class="modalDialog">
 			<div>	
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>Metallica: Reload</h2>
-				<div class="play">
-					<table style="text-align:center;">
-						<tr>
+				<div>
+					<table style="text-align:left;">
+						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+						<tr class="song">
+							<td  colspan=2><a href="player.html"><div>No Reply</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'm a Loser</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Baby's in Black</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Rock & Roll Music</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'll Follow the Sun</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Mr. Moonlight</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Kansas City</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Eight Days a Week</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Words of Love</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Honey Don't</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Every Little Thing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I Don't Want to Spoil the Party</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>What You're Doing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Everybody's Trying to be my Baby</div></a></td>
 						</tr>
 					</table>
 				</div>
-				<p><a href="player.html">Fuel</a></p>
-				<p><a href="player.html">The Memory Remains</a></p>
-				<p><a href="player.html">Devil's Dance</a></p>
-				<p><a href="player.html">The Unforgiven II</a></p>
-				<p><a href="player.html">Better Than You</a></p>
-				<p><a href="player.html">Slither</a></p>
-				<p><a href="player.html">Carpe Diem Baby</a></p>
-				<p><a href="player.html">Bad Seed</a></p>
-				<p><a href="player.html">Where the Wild Things Are</a></p>
-				<p><a href="player.html">Prince Charming</a></p>
-				<p><a href="player.html">Low Man's Lyric</a></p>
-				<p><a href="player.html">Attitude</a></p>
-				<p><a href="player.html">Fixxxer</a></p>
 			</div>
 		</div>
 		<div id="openModal6" class="modalDialog">
 			<div>	
 				<a href="#close" title="Close" class="close">X</a>
 				<h2>AC/DC: Flick of the Switch</h2>
-				<div class="play">
-					<table style="text-align:center;">
-						<tr>
+				<div>
+					<table style="text-align:left;">
+						<tr style="text-align:center;">
 							<td>Play All:</td>
-							<td><a href="player.html"><img src="library/images/misc/play.png" width="70" height="70"></a></td>
+							<td><a href="player.html"><img class="play" src="library/images/misc/play.png" width="70" height="70"></a></td>
+						</tr>
+						<tr class="song">
+							<td  colspan=2><a href="player.html"><div>No Reply</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'm a Loser</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Baby's in Black</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Rock & Roll Music</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I'll Follow the Sun</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Mr. Moonlight</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Kansas City</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Eight Days a Week</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Words of Love</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Honey Don't</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Every Little Thing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>I Don't Want to Spoil the Party</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>What You're Doing</div></a></td>
+						</tr>
+						<tr class="song">
+							<td colspan=2><a href="player.html"><div>Everybody's Trying to be my Baby</div></a></td>
 						</tr>
 					</table>
 				</div>
-				<p><a href="player.html">Rising Power</a></p>
-				<p><a href="player.html">This House is on Fire</a></p>
-				<p><a href="player.html">Flick of the Switch</a></p>
-				<p><a href="player.html">Nervous Shakedown</a></p>
-				<p><a href="player.html">Landslide</a></p>
-				<p><a href="player.html">Guns for Hire</a></p>
-				<p><a href="player.html">Deep in the Hole</a></p>
-				<p><a href="player.html">Bedlam in Belgium</a></p>
-				<p><a href="player.html">Badlands</a></p>
-				<p><a href="player.html">Brain Shake</a></p>
 			</div>
 		</div>
 	</body>
