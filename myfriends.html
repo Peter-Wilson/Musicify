@@ -21,11 +21,32 @@
 			-webkit-box-shadow: 0 0 20px #ccc;
 			box-shadow: 0 0 50px 5px #00badb;
 		}
+		#add { 
+			position:absolute;
+			top:0; 
+			right:0;
+			opacity: 1;
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
+		}
+		#add:hover {
+			opacity: 1;
+			-webkit-filter: grayscale(0) saturate(2);
+			filter: grayscale(0) saturate(2);
+			-moz-box-shadow: 0 0 20px #ccc; 
+			-webkit-box-shadow: 0 0 20px #ccc;
+			box-shadow: 0 0 50px 5px #00badb;
+		}
 /*HTML-wide CSS for things like text*/
 		html {
 			background-image: url("library/images/background/lightfuckingwood.jpg");
 			background-size: cover;
 			font-family: Arial, Helvetica, sans-serif;
+		}
+		.mouseover {
+			background-color: white;
+			padding: 10px;
+			display: none;
 		}
 		table {
 			margin-left:auto; 
@@ -34,6 +55,9 @@
 		a {
 			text-decoration:none;
 			font-weight: bold;
+		}
+		a:hover + .mouseover {
+			display: block;
 		}
 		a:link {
 			color: #000000;
@@ -59,7 +83,7 @@
 			background-image: url("library/images/background/darkfuckingwood.jpg");
 			background-size: cover;
 			width: 70%;  
-			height: 30%;
+			height: 35%;
 			margin: auto;
 			opacity: 1.0;
 		}
@@ -150,7 +174,12 @@
 	</head>
 	<body>
 		<div id="home">
-			<a href="index.html"><img border="0" alt="Home" src="images/home.png" width="90" height="90"></a>
+			<a href="index.html"><img border="0" alt="Home" src="images/home.png" width="113" height="113"></a>
+			<div class="mouseover">Home</div>
+		</div>
+		<div id="add">
+			<a><img border="0" alt="Home" src="library/images/misc/friend2.jpg" width="150" height="113"></a>
+			<div class="mouseover">Add a friend</div>
 		</div>
 		<div class="title">
 			<h1>What Your Friends Recently Listened To</h1>
@@ -226,48 +255,156 @@
 		<section id="slick-content">
 			<h2>Andrew "The Beatle Lover" Sindelar</h2>
 			<div class="slider">
-				<div><img src="library/images/beatles/abbey.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/forsale.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/hard.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/help.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/letitbe.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/please.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/revolver.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/rubber.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/sgtpepper.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/submarine.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/white.jpg" height="200" width="200"></div>
-				<div><img src="library/images/beatles/withthebeatles.jpg" height="200" width="200"></div>
+				<div>
+					<table>
+						<tr>
+							<td>Abbey Road</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/abbey.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Beatles for Sale</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/forsale.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>A Hard Day's Night</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/hard.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Help!</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/help.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Let it Be</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/letitbe.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Please Please Me</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/please.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Revolver</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/revolver.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Rubber Soul</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/rubber.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Sgt. Pepper</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/sgtpepper.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>Yellow Submarine</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/submarine.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>White Album</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/white.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<td>With The Beatles</td>
+						</tr>
+						<tr>
+							<td><img src="library/images/beatles/withthebeatles.jpg" height="250" width="250"></td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</section>
 		<section id="slick-content">
 			<h2>Mack Johnson</h2>
 			<div class="slider">
-				<div><img src="library/images/metallica/anger.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/black.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/death.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/garage.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/justice.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/kill.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/lightning.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/load.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/puppet.jpg" height="200" width="200"></div>
-				<div><img src="library/images/metallica/reload.jpg" height="200" width="200"></div>
+				<div><img src="library/images/metallica/anger.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/black.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/death.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/garage.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/justice.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/kill.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/lightning.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/load.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/puppet.jpg" height="250" width="250"></div>
+				<div><img src="library/images/metallica/reload.jpg" height="250" width="250"></div>
 			</div>
 		</section>
 		<section id="slick-content">
 			<h2>Eric Smith</h2>
 			<div class="slider">
-				<div><img src="library/images/acdc/backblack.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/ball.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/blow.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/dirty.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/family.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/ice.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/jail.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/live.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/switch.jpg" alt="Smiley face" height="200" width="200"></div>
-				<div><img src="library/images/acdc/wall.jpg" alt="Smiley face" height="200" width="200"></div>
+				<div><img src="library/images/acdc/backblack.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/ball.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/blow.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/dirty.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/family.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/ice.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/jail.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/live.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/switch.jpg" alt="Smiley face" height="250" width="250"></div>
+				<div><img src="library/images/acdc/wall.jpg" alt="Smiley face" height="250" width="250"></div>
 			</div>
 		</section>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
