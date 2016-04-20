@@ -203,9 +203,9 @@
 	margin-right: auto;
 }
 #my_library:hover { 
-	-moz-box-shadow: 0 0 50px #ccc; 
-	-webkit-box-shadow: 0 0 50px #ccc; 
-	box-shadow: 0 0 50px #ccc; 
+	-moz-box-shadow: 0 0 50px #fff; 
+	-webkit-box-shadow: 0 0 50px #fff; 
+	box-shadow: 0 0 50px 10px #00badb; 
 }
 #friends_list{
 	margin-left: auto;
@@ -213,9 +213,9 @@
 }
 
 #friends_list:hover {
-	-moz-box-shadow: 0 0 50px #ccc; 
-	-webkit-box-shadow: 0 0 50px #ccc; 
-	box-shadow: 0 0 50px #ccc; 
+	-moz-box-shadow: 0 0 50px #fff; 
+	-webkit-box-shadow: 0 0 50px #fff; 
+	box-shadow: 0 0 50px 10px #00badb; 
 }
 
 #featured{
@@ -224,7 +224,7 @@
 }
 
 #featured:hover {
-	-moz-box-shadow: 0 0 50px #ccc; 
-	-webkit-box-shadow: 0 0 50px #ccc; 
-	box-shadow: 0 0 50px #ccc; 
+	-moz-box-shadow: 0 0 50px #fff; 
+	-webkit-box-shadow: 0 0 50px #fff; 
+	box-shadow: 0 0 50px 10px #00badb; 
 }
