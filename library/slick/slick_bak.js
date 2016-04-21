@@ -49,7 +49,7 @@
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
-                centerPadding: '50px',
+                centerPadding: '40px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
                     return '<button type="button" data-role="none" role="button" aria-required="false" tabindex="0">' + (i + 1) + '</button>';
@@ -64,7 +64,7 @@
                 infinite: true,
                 initialSlide: 0,
                 lazyLoad: 'ondemand',
-                mobileFirst: false,
+                mobileFirst: true,
                 pauseOnHover: true,
                 pauseOnDotsHover: false,
                 respondTo: 'window',
