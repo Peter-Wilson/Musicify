@@ -21,8 +21,9 @@
     position: relative;
     display: block;
     margin: auto;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow: hidden;;
+	margin: 0;
+    padding: 0;
 }
 .slick-list:focus
 {
@@ -49,7 +50,6 @@
     position: relative;
     top: 0;
     left: 0;
-	right: 0;
     display: block;
 }
 .slick-track:before, .slick-track:after

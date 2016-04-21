@@ -8,7 +8,6 @@
     font-family: 'slick';
     font-weight: normal;
     font-style: normal;
-
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
@@ -24,6 +23,10 @@
     width: 10%;
     height: 10%;
     padding: 0;
+	margin-top: -10px\9; /*lte IE 8*/
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
     cursor: pointer;
     color: #ffffff;
     border: none;

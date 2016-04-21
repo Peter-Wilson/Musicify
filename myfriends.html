@@ -86,8 +86,9 @@
 			background-size: cover;
 			width: 70%;  
 			height: 35%;
-			margin: auto;
+			margin: 20px auto;
 			opacity: 1.0;
+			text-align: center;
 		}
 		.slider div table{
 			text-align:center;
@@ -102,6 +103,8 @@
 			display: block;
 			opacity: 1.0;
 			z-index: 1;
+			max-width: 10% !important;
+			max-height:20% !important;
 		}
 		h1, h2 {
 		text-align: center;
@@ -175,6 +178,40 @@
 	</style>
 	</head>
 	<body>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="library/slick/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.slider').slick({
+					dots: true,	
+					centerMode: false,
+					index: 2,
+					infinite: true,
+					slidesToShow: 5,
+					speed:75,
+					responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								arrows: true,
+								centerMode: false,
+
+								slidesToShow: 5
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								arrows: true,
+								centerMode: false,
+								slidesToShow: 1
+							}
+						}
+					]
+				});
+			});
+		</script>
 		<div id="home">
 			<a href="index.html"><img border="0" alt="Home" src="library/images/misc/home.png" width="90" height="90"></a>
 		</div>
@@ -591,41 +628,6 @@
 				</div>
 			</div>
 		</section>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="library/slick/slick.min.js"></script>
-
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('.slider').slick({
-					dots: true,	
-					centerMode: false,
-
-					infinite: true,
-					slidesToShow: 5,
-					speed:100,
-					responsive: [
-						{
-							breakpoint: 768,
-							settings: {
-								arrows: true,
-								centerMode: false,
-
-								slidesToShow: 5
-							}
-						},
-						{
-							breakpoint: 480,
-							settings: {
-								arrows: true,
-								centerMode: false,
-								slidesToShow: 1
-							}
-						}
-					]
-				});
-			});
-	</script>
 	</body>
 	<body>
 		<div id="openModal1" class="modalDialog">
