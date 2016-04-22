@@ -25,15 +25,15 @@
 }
 #prev {
 	float:left;
-	width:150px;
-	height:150px;
+	width:100px;
+	height:100px;
 	margin-bottom:50px; 
 	margin-left: 20px;
 }
 #next {
 	float:right;
-	width:150px;
-	height:150px;
+	width:100px;
+	height:100px;
 	margin-bottom:50px; 
 	margin-right: 20px;
 }
@@ -156,7 +156,8 @@
 }
 
 .song-list { 
-	background-color: red; 
+	background-image: url("../library/images/background/darkfuckingwood.jpg");
+	background-repeat: repeat;
 	overflow:auto; 
 	padding-top:-10px;
 	width:50%; 
@@ -164,14 +165,26 @@
 	float:left;
 }
 
+.play:hover {
+	-webkit-filter: invert(1) grayscale(1) contrast(0.8);
+	filter: invert(1) grayscale(1) contrast(0.8);
+}
+
+.button:hover {
+	-webkit-filter: invert(1) grayscale(1) contrast(0.8);
+	filter: invert(1) grayscale(1) contrast(0.8);
+}
+
 .player { 
 	background-image: url("../images/stainless_steel.png"); 
 	background-size: cover;  
+	min-width: 400px;
+	min-height: 700px;
 	width:50%; 
 	height:100%; 
 	float:right
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
 	/* For mobile phones: */
 	.song-list{
 		width: 100%; 
@@ -182,6 +195,7 @@
 		width: 100%; 
 		height:55%; 
 		float:none;
+		min-height: 475px;
 	}
 	.circular { 
 		height: 370px; 
@@ -189,14 +203,14 @@
 		margin-top:-185px;
 	}
 	#next { 
-		height: 100px; 
-		width:100px;
+		height: 75px; 
+		width:75px;
 		margin-bottom:0px; 
 		margin-right: 0px;
 	}
 	#prev { 
-		height: 100px; 
-		width:100px;
+		height: 75px; 
+		width:75px;
 		margin-bottom:0px; 
 		margin-left: 0px;
 	}
