@@ -11,22 +11,9 @@
 			  });
 		  });
 		  
-		  $(window).on("resize", function(){var rad = ($('#cd').width()/2)+50;
-										circularSlider.setRadius(rad);});
 		  var circularSlider;
 		  
 		  function setupSlider(){
-			  var rad = ($('#cd').width()/2)+50;
-			  circularSlider = $('#slider').CircularSlider({ 
-					min : 30, 
-					radius: rad,
-					max: 200, 
-					value : 10,
-					shape: 'Half Circle',
-					labelSuffix: "°",
-					slide : function(value) {
-					}
-				});
 				var spinner;
 				
 				$('#play').click(function(){

@@ -3,37 +3,88 @@
 		<script src="js/jquery-2.2.2.min.js"></script>
 		<script src="js/jquery-rotate.js"></script>
 		<script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-		<script src="js/circular-slider.js"></script>
+
+
 		<script src="js/player.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/circular-slider.css" />
 		<link rel="stylesheet" type="text/css" href="css/music.css" />
+        <link rel="stylesheet" href="knobKnob/knobKnob.css" />
+
 	</head>
 	<body onLoad="setupSlider()">
-		<div id="home"  onclick="location.href='homepage.html'"></div>
+		
 		<div id="songs" class="song-list">
+			<div id="menu" class="menu">
+				<div id="home"  onclick="location.href='index.html'"></div>
+				<div class="playlist_label">Playlist</div>
+			</div>	
+			<div id="now_playing" class="now_playing">
+				<div style="position:absolute; padding:5px;width:95%">
+					<div>
+					<table style="width:100%; padding-left:10px;padding-right:10px;font-weight:bold;
+	color:#FFFFFF; ";>
+						<tr>
+							<td>
+								<img src="images/airplane-over-the-sea-album.jpg" class="playing_album"  />
+							</td>
+							<td>
+									Artist:<br />Neutral Milk Hotel
+							</td>
+							<td>
+									Song:<br />Two-Headed Boy
+							</td>
+							<td>
+									Album:<br />In the Aeroplane Over the Sea
+							</td>
+							<td>
+								Length:<br />4:26
+							</td>
+							<td>
+								Times Played<br />10
+							</td>
+						</tr>
+					</table>
+					</div>
+				</div>
+			</div>
+			<div id="up_next" class="up_next">Up Next:</div>
 			<ul id="sortable">
 			  <li><div class="new_country"><div class="title">THE WALKMEN - NEW COUNTRY</div></div></li>
 			  <li><div class="empty_threat"><div class="title">CHVRCHES - EMPTY THREAT</div></div></li>
+			  <li><div class="hard"><div class="title">THE BEATLES - CAN'T BUY ME LOVE</div></div></li>
 			  <li><div class="rubber"><div class="title">YUCK - RUBBER</div></div></li>
+			  <li><div class="lightning"><div class="title">METALLICA - FOR WHOM THE BELL TOLLS</div></div></li>
 			  <li><div class="interlude"><div class="title">MY CHEMICAL ROMANCE - INTERLUDE</div></div></li>
+			  <li><div class="abbey"><div class="title">THE BEATLES - COME TOGETHER</div></div></li>
 			  <li><div class="moon"><div class="title">NEKO CASE - I WISH I WAS THE MOON</div></div></li>
 			  <li><div class="shoot"><div class="title">SONIC YOUTH - SHOOT</div></div></li>
 			  <li><div class="revolver"><div class="title">THE BEATLES - REVOLVER</div></div></li>
 			  <li><div class="lobotomy"><div class="title">NATIVE AMERICA - DIGITAL LOBOTOMY</div></div></li>
+			  <li><div class="sandman"><div class="title">METALLICA - ENTER SANDMAN</div></div></li>
 			</ul>
+			</div>
 			
 		</div>
 		<div class="player">
 			<div></div>
 			<div style="text-align:center;width:100%;height:100%;position:relative">
+				<div id="bars" class="volume">
+					<div id="control"></div>
+				</div>
 				<div class='circular' id="cd"></div>
 				<div id="play" class="play"></div>
-				<span style="position:absolute; bottom:0;right:0;width:100%;" >
 				<img src="images/skip-previous.png" id="prev" class='button'/>
-				<img src="images/skip-next.png" id="next" class='button' /></span>				
+				<img src="images/skip-next.png" id="next" class='button' />		
 				<div id="arm" class='arm'></div>
-				</div>				
+			</div>				
+			<section id="main">
 			
+		<script src="knobKnob/transform.js"></script>
+		<script src="knobKnob/knobKnob.jquery.js"></script>
+		<script src="js/script.js"></script>
+			
+		</section>
+
 				
 			
 		</div>
