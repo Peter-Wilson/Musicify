@@ -40,11 +40,10 @@
 .play {
 	width: 100px;
 	height: 100px;
-	border-radius: 50%;
-	position: relative;
+	position:absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+	left: 50%;
+	margin-left:-50px;
 	transform: translateY(-50%);
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -54,6 +53,19 @@
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+.arm {
+	width: 200px;
+	height: 400px;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-top:-105px;
+	margin-left:75px;
+	transform: translateY(-50%);
+	background: url("../images/img-record-arm.png");
+	background-size: cover; 
+	display:inline-block;
 }
 #home { 
 	position:absolute;
@@ -192,6 +204,13 @@
 			top:50%;
 			margin-top: -120px;
 	}
+	
+	.arm {
+	width: 150px;
+	height: 300px;
+	margin-top:-75px;
+	margin-left:50px;
+}
 }
 
 .store {
