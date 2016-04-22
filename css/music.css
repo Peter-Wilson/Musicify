@@ -67,15 +67,27 @@
 	background-size: cover; 
 	display:inline-block;
 }
-#home { 
-	position:absolute;
-	top:0; 
-	left:0;
-	height: 50px; 
-	width:50px;
-	background-image: url("../images/home.png");
-	background-size: cover;
+.menu {
+	height: 55px; 
+	width:100%;
+	background: url("../library/images/background/lightfuckingwood_header.png");
+	background-size: cover; 
+	position:relative;
 }
+#home { 
+	height: 50px;
+	width: 50px;
+	margin-left:2.5px;
+	background-image: url("../library/images/misc/home.png");
+	background-size: cover;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+#home:hover {
+			opacity: 1;
+			-webkit-filter: grayscale(0);
+			filter: grayscale(0);
+		}
 .new_country { 
 	width: 100%; 
 	background-color:blue; 
@@ -153,6 +165,16 @@
 	display:inline-block; 
 	margin-top:5px; 
 	font-weight:bold;
+}
+
+.playlist_label
+{
+	position:absolute;
+	left:50%; 
+	margin-left:-70px; 
+	top:0px;
+	font-weight:bold;
+	font-size:40px;
 }
 
 .song-list { 
