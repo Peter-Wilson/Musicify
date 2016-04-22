@@ -8,7 +8,13 @@
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-
+.volume{
+	position:absolute;
+	top:50%;
+	margin-top:-300px;
+	left:50%;
+	margin-left:-275px;
+}
 .playing_album{
 	border:1px solid white;
 	height:60px;
@@ -31,18 +37,22 @@
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 #prev {
-	float:left;
 	width:100px;
 	height:100px;
-	margin-bottom:50px; 
-	margin-left: 20px;
+	position:absolute;
+	top:50%;
+	margin-top:250px;
+	left:50%;
+	margin-left:-275px;
 }
 #next {
-	float:right;
 	width:100px;
 	height:100px;
-	margin-bottom:50px; 
-	margin-right: 20px;
+	position:absolute;
+	top:50%;
+	margin-top:250px;
+	left:50%;
+	margin-left:150px;
 }
 .play {
 	width: 100px;
@@ -217,7 +227,7 @@
 	float:right
 }
 .now_playing{
-	height:70px;
+	height:80px;
 	background-color:#EEEEEE;
 	position:relative;
 }
@@ -243,17 +253,30 @@
 		width:370px;
 		margin-top:-185px;
 	}
+	.volume{
+		position:absolute;
+		top:50%;
+		margin-top:-200px;
+		left:50%;
+		margin-left:-250px;
+	}
 	#next { 
 		height: 75px; 
 		width:75px;
-		margin-bottom:0px; 
-		margin-right: 0px;
+		top:50%;
+		position:absolute;
+		margin-top:150px;
+		left:50%;
+		margin-left:150px;
 	}
 	#prev { 
 		height: 75px; 
 		width:75px;
-		margin-bottom:0px; 
-		margin-left: 0px;
+		position:absolute;
+		top:50%;
+		margin-top:150px;
+		left:50%;
+		margin-left:-250px;
 	}
 	#slider{
 			top:50%;

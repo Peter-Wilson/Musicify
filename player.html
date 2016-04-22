@@ -3,10 +3,13 @@
 		<script src="js/jquery-2.2.2.min.js"></script>
 		<script src="js/jquery-rotate.js"></script>
 		<script src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-		<script src="js/circular-slider.js"></script>
+
+
 		<script src="js/player.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/circular-slider.css" />
 		<link rel="stylesheet" type="text/css" href="css/music.css" />
+        <link rel="stylesheet" href="knobKnob/knobKnob.css" />
+
 	</head>
 	<body onLoad="setupSlider()">
 		
@@ -16,19 +19,27 @@
 				<div class="playlist_label">Playlist</div>
 			</div>	
 			<div id="now_playing" class="now_playing">
-				<div style="position:absolute; padding:5px;width:90%">
-					<div style="left:50%; margin-left:-70px; position:absolute;">
-					<table>
+				<div style="position:absolute; padding:5px;width:100%">
+					<div>
+					<table style="width:100%; padding-left:10px;padding-right:10px;";>
 						<tr>
 							<td>
 								<img src="images/airplane-over-the-sea-album.jpg" class="playing_album"  />
 							</td>
 							<td>
-								<div>
-									Artist: Neutral Milk Hotel <br />
-									Song: Two-Headed Boy <br />
-									Album: In the Aeroplane Over the Sea
-								</div>
+									Artist:<br />Neutral Milk Hotel
+							</td>
+							<td>
+									Song:<br />Two-Headed Boy
+							</td>
+							<td>
+									Album:<br />In the Aeroplane Over the Sea
+							</td>
+							<td>
+								Length:<br />4:26
+							</td>
+							<td>
+								Times Played<br />10
 							</td>
 						</tr>
 					</table>
@@ -52,14 +63,23 @@
 		<div class="player">
 			<div></div>
 			<div style="text-align:center;width:100%;height:100%;position:relative">
+				<div id="bars" class="volume">
+					<div id="control"></div>
+				</div>
 				<div class='circular' id="cd"></div>
 				<div id="play" class="play"></div>
-				<span style="position:absolute; bottom:0;right:0;width:100%;" >
 				<img src="images/skip-previous.png" id="prev" class='button'/>
-				<img src="images/skip-next.png" id="next" class='button' /></span>				
+				<img src="images/skip-next.png" id="next" class='button' />		
 				<div id="arm" class='arm'></div>
-				</div>				
+			</div>				
+			<section id="main">
 			
+		<script src="knobKnob/transform.js"></script>
+		<script src="knobKnob/knobKnob.jquery.js"></script>
+		<script src="js/script.js"></script>
+			
+		</section>
+
 				
 			
 		</div>
