@@ -231,6 +231,32 @@
 	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/vinylstoreII.jpg");
 	background-size: cover;
 }
+#profile { 
+	position:absolute;
+	top:0; 
+	right:100px;
+	opacity: 1;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+#profile:hover {
+	opacity: 1;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+#options { 
+	position:absolute;
+	top:0; 
+	right:0;
+	opacity: 1;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+#options:hover {
+	opacity: 1;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
 #my_library {
 	margin-left: auto;
 	margin-right: auto;
