@@ -1,10 +1,17 @@
 #sortable li {
 	list-style-type: none;
 	margin-left:-50;
+	cursor: pointer;
+	height:35px;
 }
 #sortable {
 	margin-top: 0px;
 	margin-bottom: 0px;
+}
+
+.playing_album{
+	border:1px solid white;
+	height:60px;
 }
 
 .circular {
@@ -87,78 +94,79 @@
 			opacity: 1;
 			-webkit-filter: grayscale(0);
 			filter: grayscale(0);
+			cursor: pointer;
 		}
 .new_country { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center; 
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/you&me-album.jpg"); 
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/you&me-album.jpg"); 
 }
 .empty_threat { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center; 
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/every-open-eye-album.jpg");
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/every-open-eye-album.jpg");
 }
 .rubber { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center; 
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/yuck-album.jpg"); 
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/yuck-album.jpg"); 
 }
 .interlude { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center; 
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/mcr-album.jpg"); 
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/mcr-album.jpg"); 
 }
 .lobotomy { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center; 
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/digital-lobotomy-album.jpg"); 
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/digital-lobotomy-album.jpg"); 
 }
 .moon { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center; 
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/black-listed-album.png");
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/black-listed-album.png");
 }
 .shoot { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center;  
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/dirty-album.jpg");
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/dirty-album.jpg");
 }
 .revolver { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center;  
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/revolver-album.jpg");
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/revolver-album.jpg");
 }
 .riot { 
 	width: 100%; 
 	background-color:blue; 
-	height: 30px; 
+	height: 35px; 
 	line-height: 20px; 
 	text-align:center;  
-	background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("../images/riot-album.jpg");
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("../images/riot-album.jpg");
 }
 .title { 
 	background-color: white; 
@@ -190,11 +198,13 @@
 .play:hover {
 	-webkit-filter: invert(1) grayscale(1) contrast(0.8);
 	filter: invert(1) grayscale(1) contrast(0.8);
+	cursor: pointer;
 }
 
 .button:hover {
 	-webkit-filter: invert(1) grayscale(1) contrast(0.8);
 	filter: invert(1) grayscale(1) contrast(0.8);
+	cursor: pointer;
 }
 
 .player { 
@@ -205,6 +215,15 @@
 	width:50%; 
 	height:100%; 
 	float:right
+}
+.now_playing{
+	height:70px;
+	background-color:#EEEEEE;
+	position:relative;
+}
+.up_next{
+	background:white;
+	float:left;
 }
 @media only screen and (max-width: 1200px) {
 	/* For mobile phones: */
